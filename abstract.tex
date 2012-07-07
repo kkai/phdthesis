@@ -1,0 +1,66 @@
+\begin{flushleft}
+\medskip
+\Large\textrm{Abstract}
+\medskip
+\end{flushleft}This thesis investigates, how placement variations of electronic devices influence the possibility of using sensors integrated in those devices for context recognition.
+The vast majority of context recognition research assumes well defined, fixed sensor locations.
+%This is only acceptable for very narrow application domains, e.g. in an industrial setting.
+%To reach a more wide spread adoption of activity recognition applications, we can utilize 
+ %user-owned, mobile appliances (for details see~\ref{mot:sota}). Most of them come already equipped with sensors.
+Although this might be acceptable for some application domains (e.g. in an industrial setting), users, in general, will have a hard time coping with these limitations. If one needs to remember to carry dedicated sensors and to adjust their orientation from time to time, the activity recognition system is more distracting than helpful. How can we deal with device location and orientation changes to make context sensing mainstream?
+%to assist users during everyday tasks using mobile appliances that are already equipped with sensors.
+%For a more widespread adoption, activity recognition can leverage this sensor penetration
+%Some research already utilizes the sensors embedded in many of todays mobile appliances.
+%Today, many mobile appliances are already equipped with sensors.
+%Sensor encapsulation into clothing has been demonstrated.
+%This substrate can be used for a wide spread adoption of activity recognition (for detailed related work see~\ref{}).
+%It is thus often taken for granted that users can be easily equipped with sensors in every day situations. 
+%However, the users cannot be expected to reliably 
+%and firmly fix these sensors to narrowly defined on-body locations.
+%However, this does not imply that the user can be expected to reliably 
+%and firmly fix the sensors to narrowly defined on-body locations.
+%Traditional context and activity recognition research mostly uses dedicated
+%sensors with known location and orientation.
+%In general, the quality of these embedded sensors
+%is not much different from the devices typically used in dedicated wearable sensing systems.
+%This high level of sensor penetration presents a unique chance for activity recognition.
+%Only few related work exists dealing with this issue (for details see~\ref{}).
+This thesis presents a systematic evaluation of device placement effects in context recognition.
+We first deal with detecting if a device is carried on the body
+or placed somewhere in the environment. If the device is placed on the body, it is useful to know on which body part.
+We also address how to deal with sensors changing their position and their orientation
+during use. For each of these topics some highlights are given in the following.
+
+Regarding environmental placement, we introduce an active sampling approach
+to infer symbolic object location. This approach requires only simple sensors (acceleration,
+sound) and no infrastructure setup. The method works for specific
+placements such as "on the couch", "in the desk drawer" as well as for
+general location classes, such as "closed wood compartment" or "open
+iron surface". In the experimental evaluation we reach a
+recognition accuracy of 90\% and above over a total of over 1200 measurements from 35
+ specific locations (taken from 3 different rooms) and 12 abstract
+ location classes. 
+ 
+ To derive the coarse device placement on the body, we present 
+a method solely based on rotation and acceleration signals
+from the device. It works independent of the device orientation.
+ The on-body placement recognition rate is around 80\%
+ over 4 min. of unconstrained motion data for the worst scenario and
+ up to 90\% over a 2 min. interval for the best scenario.
+We use over 30 hours of motion data for the analysis.
+Two special issues of device placement are orientation and displacement.
+This thesis proposes a set of heuristics that significantly 
+increase the robustness of motion sensor-based activity recognition 
+with respect to sensor displacement. We show how, within 
+certain limits and with modest quality degradation, motion sensor-based 
+activity recognition can be implemented in a displacement tolerant way.
+We evaluate our heuristics first on a set of synthetic lower arm
+ motions which are well suited to illustrate the strengths and limits
+ of our approach, then on an extended modes of locomotion problem
+ (sensors on the upper leg) and finally on a set of exercises performed
+ on various gym machines (sensors placed on the lower arm). 
+In this example our heuristic raises the displaced recognition rate
+ from 24\% for a displaced accelerometer, which had 96\% recognition
+ when not displaced, to 82\%.
+
+   

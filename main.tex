@@ -1,0 +1,334 @@
+\documentclass[11pt, a4paper]{memoir}
+% extrafontsizes
+\usepackage{mdwlist}
+%\usepackage{microtype}
+\usepackage{textcomp}
+\usepackage{xspace} 
+\usepackage{booktabs} 
+\usepackage{algorithmic}
+
+%\usepackage{caption}
+%for landscape tables
+\usepackage{rotating}
+
+
+\settrimmedsize{11in}{210mm}{*} 
+\setlength{\trimtop}{0pt} 
+\setlength{\trimedge}{\stockwidth} 
+\addtolength{\trimedge}{-\paperwidth} 
+\settypeblocksize{7.75in}{33pc}{*} 
+\setulmargins{4cm}{*}{*} 
+\setlrmargins{1.6in}{*}{*} 
+\setmarginnotes{17pt}{51pt}{\onelineskip} 
+\setheadfoot{\onelineskip}{2\onelineskip} 
+\setheaderspaces{*}{2\onelineskip}{*} 
+\checkandfixthelayout
+\fixpdflayout
+
+\nouppercaseheads
+
+\makechapterstyle{abstr}{%
+  \chapterstyle{default}
+  \renewcommand*{\chapnumfont}{\normalfont\Large}
+  \renewcommand*{\chaptitlefont}{\normalfont\Large}
+ \settowidth{\chapindent}{\chapnumfont 111}
+\renewcommand*{\printchaptertitle}[1]{%
+\vskip\onelineskip
+\raggedleft {\chaptitlefont ##1\vspace*{2\onelineskip}}\par\nobreak}
+}    
+
+\makechapterstyle{conten}{%
+  \chapterstyle{default}
+  \renewcommand*{\chapnumfont}{\normalfont\HUGE}
+  \renewcommand*{\chaptitlefont}{\normalfont\HUGE}
+ % \settowidth{\chapindent}{\chapnumfont 111}
+%\renewcommand*{\printchaptertitle}[1]{%
+%   \vskip\onelineskip
+%    \raggedleft {\chaptitlefont ##1\vspace*{2\onelineskip}}\par\nobreak}
+}    
+
+\makechapterstyle{ell2}{%
+  \chapterstyle{default}
+  \renewcommand*{\chapnumfont}{\normalfont\HUGE}
+  \renewcommand*{\chaptitlefont}{\normalfont\HUGE}
+  \settowidth{\chapindent}{\chapnumfont 111}
+  \renewcommand*{\chapterheadstart}{\begingroup
+    \vspace*{\beforechapskip}%
+    \begin{adjustwidth}{}{-\chapindent}%
+    \hrulefill
+    \smash{\rule{2.6pt}{25mm}}
+    \end{adjustwidth}\endgroup}
+  \renewcommand*{\printchaptername}{}
+  \renewcommand*{\chapternamenum}{}
+  \renewcommand*{\printchapternum}{%
+    \begin{adjustwidth}{}{-\chapindent}
+    \hfill
+    \raisebox{10mm}[1pt][0pt]{\chapnumfont  \thechapter}%
+                              \hspace*{1.5em}
+    \end{adjustwidth}\vspace*{2\onelineskip}}
+    
+  \renewcommand*{\printchaptertitle}[1]{%
+   \vskip\onelineskip
+
+    \raggedleft {\vspace*{-3\onelineskip}\chaptitlefont ##1\vspace*{2\onelineskip}}\par\nobreak}}                             
+
+
+
+%used for a bib after each chapter                                    
+\usepackage[sectionbib]{natbib}
+\usepackage{chapterbib}
+
+\usepackage[ansinew]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{relsize}
+\usepackage{guit}
+\usepackage{fancyvrb}
+\usepackage{calc}
+\usepackage{texnames}
+\usepackage{placeins}
+
+\usepackage{nicefrac}
+
+
+\usepackage[english]{babel}
+\usepackage[english]{varioref}
+
+\setcounter{tocdepth}{2}
+\usepackage{hyperref}
+\usepackage{multicol}
+\usepackage{setspace}
+
+\usepackage[small]{caption}
+
+
+%\setstocksize{11in}{8.5in}
+%\settrimmedsize{11in}{8.5in}{*}
+%\settrims{0in}{0in}
+%\settypeblocksize{9.0in}{30pc}{*}
+%\setlrmargins{1.25in}{*}{*}
+%\setulmargins{1.0in}{*}{*}
+%\setheadfoot{13pt}{26pt}
+%\setheaderspaces{*}{13pt}{*}
+\checkandfixthelayout
+\openright
+
+%\usepackage[T1]{fontenc}
+
+%\font\warnock="Georgia" at 11pt
+
+%\renewcommand{\rmdefault}{ptm}
+%\renewcommand{\rmdefault}{warnock}
+%\usepackage{fontspec}
+%\setromanfont{Georgia}
+
+
+%Compensating for On-Body
+%Placement Effects in Wearable Sensors
+
+%\usepackage{comment}
+\usepackage[english]{babel}
+\usepackage{graphicx}
+
+
+\usepackage{multirow}
+%\usepackage{isorot}%\usepackage[dvips]{graphicx}
+%\addtolength{\tabcolsep}{3pt}
+\usepackage{subfig}
+
+\DeclareGraphicsExtensions{.pdf,.jpg,.png}
+\graphicspath{{OnOff/}{Displacement/}{Orientation/}{Onbody/}{Motivation/}{Conclusion/}}
+
+%\ttfgeorgia
+
+\usepackage{subfig}
+\usepackage{tabulary}
+
+\IfFileExists{lmodern.sty}{%
+  \RequirePackage{lmodern}
+  \usepackage[T1]{fontenc}}{}
+  \IfFileExists{mathpazo.sty}
+             {\RequirePackage[sc]{mathpazo}}
+             {\renewcommand\rmdefault{ppl}}
+%\usepackage{titlepages}  % code of the example titlepages
+%\usepackage{memlays}     % extra layout diagrams
+%\usepackage{dpfloat}     % floats on facing pages
+%\usepackage{fonttable}[2009/04/01] 
+
+%\settocdepth{subsection}
+%%% Numbering down to subsections as well
+%\setsecnumdepth{subsection}
+
+% end demo
+
+%nice package to make referencing easier
+%no longer the need for Table~\ref{somelabel}
+%just use \cref{somelabel}
+%\usepackage{cleveref}
+
+%\newcommand{\mycaption}[2][\@empty]{ 
+%\captionnamefont{\sffamily\hfill} \captiondelim{\hfill} \captionstyle{\centerlastline\\}
+%\captiontitlefont{\scshape} \setlength{\belowcaptionskip}{10pt} \ifx \@empty#1 \caption{#2}\else \caption[#1]{#2}}
+
+
+
+\fixpdflayout
+\begin{document}
+
+\makepagestyle{ruled2} 
+
+%\makeevenfootruled{\thepage}{}{} % page numbers at the outside 
+\makeoddfoot{ruled2}{}{}{\thepage} 
+\makeevenfoot{ruled2}{\thepage}{}{} 
+\makeheadrule{ruled2}{\textwidth}{\normalrulethickness} 
+\makeevenhead{ruled2}{\leftmark}{}{} % small caps 
+\makeoddhead{ruled2}{}{}{\rightmark}
+
+\makepsmarks{ruled2}{% 
+ \nouppercaseheads 
+
+\createmark{chapter}{left}{shownumber}{}{. \space} 
+\createmark{section}{right}{shownumber}{}{. \space} 
+\createplainmark{toc}{both}{\contentsname} 
+\createplainmark{lof}{both}{\listfigurename} 
+\createplainmark{lot}{both}{\listtablename} 
+\createplainmark{bib}{both}{\bibname} 
+\createplainmark{index}{both}{\indexname} 
+\createplainmark{glossary}{both}{\glossaryname}
+}
+
+\makepagestyle{companion2} 
+\makerunningwidth{companion2}{\textwidth}
+\makeheadrule{companion2}{\textwidth}{\normalrulethickness}
+\makeheadposition{companion2}{flushright}{flushleft}{}{}
+\makeevenhead{ruled2}{\leftmark}{}{} % small caps 
+\makeoddhead{ruled2}{}{}{\rightmark}
+
+\makepsmarks{companion2}{% 
+\nouppercaseheads 
+\createmark{chapter}{both}{nonumber}{}{} 
+\createmark{section}{right}{shownumber}{}{. \space} 
+\createplainmark{toc}{both}{\contentsname} 
+\createplainmark{lof}{both}{\listfigurename} 
+\createplainmark{lot}{both}{\listtablename} 
+\createplainmark{bib}{both}{\bibname} 
+\createplainmark{index}{both}{\indexname} 
+\createplainmark{glossary}{both}{\glossaryname}
+}
+
+
+\fixpdflayout
+\frontmatter
+%\pagestyle{headings}
+
+\pagestyle{empty}
+% title page
+%\vspace*{\fill}
+\begin{flushleft}
+\medskip 
+\medskip 
+\HUGE\textrm{Compensating for On-Body Placement Effects in Activity Recognition}\par
+%\HUGE\textrm{Sensor Placement Tolerance in Activity Recognition}\par
+\end{flushleft}
+\medskip
+\begin{flushright}
+%\LARGE
+{Kai Kunze}\par
+\end{flushright}
+\vspace*{290pt}
+%\normalsize\textsf{Maintained by Lars Madsen}\par
+%\end{center}%
+%\vspace*{\fill}
+%\begin{center}
+\begin{flushleft}\par
+\textrm{This dissertation has been submitted to the}\par
+%\end{flush}
+%\begin{flushleft}
+%\LARGE
+\textrm{Universit\"at Passau}\par
+%\LARGE
+\textrm{Fakult\"at f\"ur Informatik und Mathematik}\par
+Thesis Advisor: Prof. Dr. Paul Lukowicz \par
+Co-Advisor: Prof. Dr. Hans Gellersen
+%\end{center}
+\end{flushleft}
+\vspace*{\fill}
+%\def\THP{T\kern-0.2em H\kern-0.4em P}%   OK for CMR
+%\def\THP{T\kern-0.15em H\kern-0.3em P}%   OK for Palatino
+%\newcommand*{\THPress}{The Herries Press}%
+\begin{flushright}
+June 2011
+%\settowidth{\droptitle}{\textsf{\THPress}}%
+%\textrm{\normalsize \THP} \\
+%\textsf{\THPress} \\[0.2\baselineskip]
+%\setlength{\droptitle}{0pt}%
+\end{flushright}
+\clearpage
+%\setupshorttoc
+%\tableofcontents
+%\clearpage
+%\setupparasubsecs
+%\setupmaintoc
+%\pagenumbering{arabic}
+\chapterstyle{abstr}
+\pagestyle{empty}
+% title page
+\vspace*{240pt}
+%\begin{flushright}
+%to my mother
+%\end{flushright}
+\newpage
+\clearpage
+\include{acks}
+\include{abstract}
+%\chapter{Abstract}
+\chapterstyle{conten}
+\tableofcontents*
+\setlength{\unitlength}{1pt}
+\clearpage
+\listoffigures*
+\clearpage
+\listoftables*
+\clearpage
+%\listofegresults
+%
+%%%\title{Fixing Context Recognition  - Compensating for On-Body Placement Effects in Wearable Sensors} 
+%%%%
+\mainmatter
+\chapterstyle{ell2}
+\pagestyle{ruled2}
+%\pagestyle{companion2}
+\setsecheadstyle{\rmfamily\LARGE}
+\setsubsecheadstyle{\bfseries}
+\setparaheadstyle{\itshape\bfseries}
+%subsection headings
+%\setsubsecheadstyle{\normalfont\centering\MakeUppercase}
+%\setsecheadstyle{\centering}
+
+%\pagenumbering{arabic}
+
+\include{Motivation}      
+%%\include{Summary}            
+%%\include{SignalLevel} 
+\include{OnOff} 
+\include{Onbody}
+\include{Displacement}
+\include{Orientation}
+\include{Conclusion}
+\checkandfixthelayout
+
+%\input{4.displacement}
+%\input{5.orientation}
+%\input{6.audio}
+%\input{7.conclusion}
+%\appendix
+
+%\captionsetup[figure]{list=no} 
+%\captionsetup[table]{list=no}
+\setcounter{tocdepth}{1}
+%\input{Appendix-Zeiss.tex}
+%\input{Appendix-Zeiss2.tex}
+
+\end{document}
